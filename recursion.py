@@ -40,6 +40,7 @@ def reverse(l):
         # return l
 
         # pop can also be used in previous recursive functions for another solution
+        # BUT POP MUTATES L. I THINK THIS IS BAD, PURPLE!NICK.
 
 # Fibonacci returns the nth fibonacci number. The nth fibonacci number is
 # defined as fib(n) = fib(n-1) + fib(n-2)
@@ -55,12 +56,12 @@ def fibonacci(n):
 # Finds the item i in the list l.... RECURSIVELY
 # if the item i doesn't exist, return NONE
 def find(l, i):
-    print "the list is ", l
+    # print "the list is ", l
     if len(l) == 0:
-        return "%r does not exist in the list" % i
+        # return "%r does not exist in the list" % i
         return None
     elif i == l[0]:
-        return "%r exists in the list" % i
+        # return "%r exists in the list" % i
         return i
     else: 
         return find(l[1:], i)
@@ -90,9 +91,13 @@ def fold_paper(width, height, folds):
 
 # Count up
 # Print all the numbers from 0 to target
+# n is the start number
 def count_up(target, n):
-    
-    return
+    if n == target:
+        return target
+    else: 
+        print n
+        return count_up(target, n + 1)
 
 l = [1, 2, 3, 4, 5]
 print "l = ", l
@@ -102,8 +107,9 @@ print "count_list: ", count_list(l)
 print "sum_list: ", sum_list(l)
 print "reverse: ", reverse(l)
 print "fibonacci: ", fibonacci(10) #this should equal 55
+l = [1, 2, 3, 4, 5]
 print "find: ", find(l, 3)
 print "palindrome: ", palindrome('girafarig')
 print "fold_paper: ", fold_paper(100, 50, 2)
-# print "count_up: ", count_up(30, )
+print "count_up: ", count_up(30, 0)
 
