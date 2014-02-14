@@ -91,7 +91,7 @@ def fold_paper(width, height, folds):
 
 # Count up
 # Print all the numbers from 0 to target
-# n is the start number
+# n is the start number -- need a variable to keep track of the number to print
 def count_up(target, n):
     if n == target:
         return target
